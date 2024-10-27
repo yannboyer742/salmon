@@ -271,6 +271,8 @@ void ExecutionUnit::ExecuteInstruction(Memory& memory, RenderTable& renderTable)
                         memory.Write(m_indexRegister, regVal / 100);
                         memory.Write(m_indexRegister + 1, (regVal % 100) / 10);
                         memory.Write(m_indexRegister + 2, regVal % 10);
+
+                        m_programCounter += 2;
                     }
                     break;
                 case 0x0055:
