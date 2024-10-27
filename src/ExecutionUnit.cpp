@@ -113,7 +113,7 @@ void ExecutionUnit::ExecuteInstruction(Memory& memory, RenderTable& renderTable)
                     break;
                 case 0x0002:
                     // AND Vx, Vy
-                    m_registers[x] ^= m_registers[y];
+                    m_registers[x] &= m_registers[y];
                     m_programCounter += 2;
                     break;
                 case 0x0003:
