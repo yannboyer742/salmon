@@ -86,5 +86,9 @@ int main(int argc, char* argv[]) {
         std::this_thread::sleep_for(std::chrono::microseconds(CPU_CLOCK_DELAY));
     }
 
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+
     return EXIT_SUCCESS;
 }
